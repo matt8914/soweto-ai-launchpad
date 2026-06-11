@@ -1,39 +1,65 @@
 # Harness Engineering
 
-Harness engineering means building the rails around Codex so it can do useful work reliably.
+Harness engineering is the practice of building the environment around an AI coding agent so it can do useful work reliably.
 
-For this challenge, the app is the thing the team builds. The harness is the set of instructions, tests, seed data, scripts and checklists that prove the app still works.
+For this challenge:
 
-## Plain Definition
+```text
+The app is what the team builds.
+The harness is how the team and Codex know whether the app is working.
+```
 
-A harness is the safety rail and scoreboard around your app.
+## Plain-English Version
 
-It tells Codex:
+A harness is the safety rail, dashboard and test track around the thing you are building.
 
-- what the product is trying to do
-- how to run the app
-- what data exists
-- what tests prove the core flow works
-- what done means before the demo
+It helps Codex answer:
 
-## Workshop Harness
+- What are we trying to build?
+- Who is this for?
+- What does success look like?
+- How do I run the project?
+- What checks tell us if the work is red or green?
+- What should I avoid?
+- What should I do next when something breaks?
 
-This repo includes:
+## Why It Matters
 
-- `AGENTS.md` as the short table of contents for Codex
-- `docs/` for deeper guidance
-- local SQLite seed data for repeatable demos
-- `npm test` for fast red/green feedback
-- `npm run check` for lint, typecheck and tests
-- `/pitch` and `/checklist` so business thinking stays visible
+Codex can produce code quickly. That is useful, but speed alone is not the win.
 
-## The Loop
+The real win is steering:
 
-1. Say what should work.
-2. Write or update the check.
-3. Watch it fail red.
-4. Ask Codex to implement the smallest fix.
+- clear problem
+- clear constraints
+- clear context
+- clear acceptance criteria
+- fast checks
+- short feedback loops
+
+Without a harness, Codex guesses. With a harness, Codex can work inside a system.
+
+## What A Small Harness Contains
+
+- `AGENTS.md` - durable instructions for Codex.
+- `docs/PROJECT_BRIEF.md` - the user, problem, result and demo scope.
+- `docs/ACCEPTANCE_CRITERIA.md` - what must be true before the team can pitch.
+- `docs/DEMO_SCRIPT.md` - what judges will see.
+- `docs/TESTING.md` - how to run red/green checks.
+- `.agents/skills/project-coach/SKILL.md` - a repo skill that keeps Codex focused.
+
+## The Red/Green Loop
+
+1. State what should work.
+2. Write a check or acceptance criterion.
+3. Confirm the current state is red or incomplete.
+4. Ask Codex for the smallest useful change.
 5. Run the check again.
-6. Stop when it is green.
+6. Repeat until green.
 
-The key lesson: good builders do not just build features. They build the system that proves the feature works.
+This is red/green test-driven development for a one-day prototype.
+
+## The Mindset
+
+Good teams do not ask AI to build everything.
+
+Good teams build a harness that lets AI build the next small thing with confidence.

@@ -1,17 +1,17 @@
 # Project Brief
 
-Use this to turn a rough idea into a buildable product.
+Use this to turn a rough idea into a buildable project.
 
 ## One-Sentence Product
 
 ```text
-A [specific user] in Soweto struggles to [specific painful job], so our app helps them [specific result] by [simple mechanism].
+A [specific user] in Soweto struggles to [specific painful job], so our project helps them [specific result] by [simple mechanism].
 ```
 
 Example:
 
 ```text
-An unemployed graduate in Diepkloof struggles to show proof of readiness, so our app helps them create a mentor-reviewed profile and apply to local opportunities.
+An unemployed graduate in Diepkloof struggles to show proof of readiness, so our project helps them create a mentor-reviewed profile and apply to local opportunities.
 ```
 
 ## Must Decide

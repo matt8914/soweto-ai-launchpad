@@ -1,26 +1,25 @@
 # Red/Green TDD
 
-The workshop rule is simple: always use red/green test-driven development.
+Red/green test-driven development means the team defines the check before asking Codex to make the change.
 
 ## Red
 
-- Write a failing test.
-- Or write a checklist item that is not true yet.
-- Run the smallest check.
-- Confirm it fails for the expected reason.
+- Write a failing automated test, or
+- Write a manual acceptance criterion that is not true yet.
+
+Then confirm the current state is red or incomplete.
 
 ## Green
 
-- Ask Codex to implement the smallest change.
-- Do not add extra features while fixing the test.
-- Run the same check.
-- Then run `npm run check`.
+- Ask Codex for the smallest useful change.
+- Run the check again.
+- Stop when the check is green.
 
-## Example
+## Challenge Example
 
 ```text
-Story: As a mentor, I can leave one next step for a graduate.
+Story: As a community member, I can complete the one core journey the team will demo to judges.
 
-Red: test expects mentor feedback to appear on /demo.
-Green: add seeded feedback and render it in the demo flow.
+Red: the acceptance criterion says the journey must work, but the current project does not support it yet.
+Green: Codex implements only enough for that journey to work, and the team can demonstrate it in under five minutes.
 ```

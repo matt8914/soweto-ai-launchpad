@@ -1,26 +1,22 @@
-import { execFileSync } from "node:child_process";
 import { existsSync } from "node:fs";
 import { join } from "node:path";
 
-function run(command, args) {
-  return execFileSync(command, args, { encoding: "utf8" }).trim();
-}
-
 const checks = [
   ["Node", process.version],
-  ["npm", run("npm", ["--version"])],
-  ["node:sqlite", await import("node:sqlite").then(() => "available").catch(() => "missing")],
-  ["package-lock", existsSync(join(process.cwd(), "package-lock.json")) ? "present" : "missing"],
-  ["SQLite seed", existsSync(join(process.cwd(), ".data", "launchpad.sqlite")) ? "present" : "run npm run db:reset"]
+  ["README", existsSync(join(process.cwd(), "README.md")) ? "present" : "missing"],
+  ["AGENTS.md", existsSync(join(process.cwd(), "AGENTS.md")) ? "present" : "missing"],
+  ["Harness docs", existsSync(join(process.cwd(), "docs", "HARNESS_ENGINEERING.md")) ? "present" : "missing"],
+  ["Codex modes docs", existsSync(join(process.cwd(), "docs", "CODEX_MODES.md")) ? "present" : "missing"],
+  ["Copyable template", existsSync(join(process.cwd(), "templates", "project-harness", "AGENTS.md")) ? "present" : "missing"],
+  ["Harness skill", existsSync(join(process.cwd(), ".agents", "skills", "harness-coach", "SKILL.md")) ? "present" : "missing"]
 ];
 
-console.log("Soweto AI Launchpad doctor");
+console.log("Soweto AI Harness Launch Kit doctor");
 for (const [label, value] of checks) {
   console.log(`- ${label}: ${value}`);
 }
 
 console.log("\nRecommended first commands:");
-console.log("1. npm install");
-console.log("2. npm run db:reset");
-console.log("3. npm run dev");
-console.log("4. npm run check");
+console.log("1. npm test");
+console.log("2. npm run check");
+console.log("3. npm run copy:harness -- /path/to/team-project");

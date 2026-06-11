@@ -1,83 +1,84 @@
-# Soweto AI Launchpad
+# Soweto AI Harness Launch Kit
 
-A public starter repo for the Boundless Soweto AI App Development Challenge 2026.
+This is not an application scaffold.
 
-The goal is not to start from a blank page. The goal is to clone a working baseline, use Codex with a clear harness, and customize it into a prototype that can be pitched by the end of the day.
+This repo is a Codex and harness engineering launch kit for the Boundless Soweto AI App Development Challenge 2026. Teams should clone it, let Codex read it, learn the workflow, then copy the harness templates into the project they decide to build.
 
-Default sample product: **KasiCareer Connect**, a local youth employment and mentorship prototype for Soweto graduates.
+The core idea:
 
-## What Teams Build
-
-- An epic marketing homepage that captures the vision.
-- A working prototype with 2-3 user roles.
-- One complete demo flow backed by local SQLite seed data.
-- A pitch and simple business case.
-- A final checklist judges can scan quickly.
-
-## Quick Start
-
-You need Node.js `>=22.5.0` because this starter uses the built-in `node:sqlite` module for local SQLite.
-
-```bash
-npm install
-npm run db:reset
-npm run dev
+```text
+Humans steer. Agents execute. The harness makes the work visible, testable and reviewable.
 ```
 
-Open `http://localhost:3000`.
+## What This Repo Teaches
 
-Before pitching:
+- What harness engineering is.
+- How to use Codex as a build partner instead of an autocomplete tool.
+- How to use Plan mode before coding.
+- How to use Goal mode to hold the day’s outcome steady.
+- How to use side chat for status, explanations and course correction.
+- How to use red/green checks so teams know whether the prototype still works.
+- How to give Codex enough repo context through `AGENTS.md`, docs, prompts, acceptance criteria and tests.
+
+## How Participants Should Use It
+
+1. Clone this repo.
+2. Open it with Codex.
+3. Ask Codex to explain the harness in plain language.
+4. Choose the project your team wants to build.
+5. Copy `templates/project-harness/` into your new project folder.
+6. Customize the copied files for your idea.
+7. Start building with Plan mode, Goal mode and red/green checks.
+
+## First Prompt
+
+```text
+Read this repo and explain harness engineering to our team in plain language. Then show us exactly which files from templates/project-harness we should copy into the project we are about to build. Do not write product code yet.
+```
+
+## The Prompt To Start A New Project
+
+Use this after your team has chosen a problem:
+
+```text
+We are building for the Boundless Soweto AI App Development Challenge. Use Plan mode. Do not edit yet.
+
+Our user is: [specific user]
+Their problem is: [specific problem]
+The result we want is: [specific result]
+Our demo must be ready by 15:40.
+
+Read AGENTS.md and the docs in this repo. Propose the smallest harness and first red/green milestone for our project.
+```
+
+## Repo Map
+
+- `docs/HARNESS_ENGINEERING.md` - the main explanation.
+- `docs/CODEX_MODES.md` - Plan mode, Goal mode and side chat.
+- `docs/PROMPT_LIBRARY.md` - copy-paste prompts for the challenge.
+- `docs/COPY_THIS_HARNESS.md` - what to copy into a team project.
+- `templates/project-harness/` - the actual copyable harness.
+- `.agents/skills/harness-coach/` - repo skill for Codex to teach and apply the harness.
+- `facilitator/masterclass-guide.md` - 35-minute Luma masterclass script.
+
+## Commands
+
+There is no product runtime in this repo.
 
 ```bash
+npm test
+npm run doctor
 npm run check
-npm run build
-npm run smoke
 ```
 
-## Routes
+These commands validate that the launch kit still contains the right harness material and has not drifted back into a product scaffold.
 
-- `/` - marketing site
-- `/demo` - role-based prototype
-- `/pitch` - pitch and business case
-- `/checklist` - final judging checklist
+To copy the harness into another project:
 
-## First Codex Prompt
-
-```text
-Read this repo, use Plan mode, do not edit yet. Help us choose one Soweto community problem, one specific user, and one core user journey we can demo by 15:40.
+```bash
+npm run copy:harness -- /path/to/your-project
 ```
-
-## Goal Mode Template
-
-```text
-By 15:40, this team must have a working prototype, marketing page, pitch page, business case, and green checks for one clear Soweto community problem. Use local SQLite, no real auth, no external services, and keep the demo judge-friendly.
-```
-
-## Recommended Workflow
-
-1. Pick one challenge track and one painful user problem.
-2. Write one user story.
-3. Ask Codex for a plan before edits.
-4. Create or update one failing test.
-5. Make the smallest useful change.
-6. Run checks until green.
-7. Commit after each green milestone.
-8. Prepare the pitch from `/pitch`.
 
 ## Optional Hallmark Design Skill
 
-This repo vendors the third-party Hallmark design skill under `.agents/skills/hallmark` if available. Hallmark is MIT licensed and comes from [Nutlope/hallmark](https://github.com/Nutlope/hallmark).
-
-Use it to improve the marketing site, but do not copy protected designs, logos, paid templates or exact trade dress.
-
-## Stack
-
-- Next.js App Router
-- TypeScript
-- Tailwind CSS
-- Local SQLite through Node `node:sqlite`
-- Vitest acceptance tests
-
-No Docker, no Supabase, no required API keys and no real authentication.
-
-The optional `OPENAI_API_KEY` placeholder in `.env.example` is only for teams that later want to replace the local deterministic coach stub with a real AI feature. The challenge-day starter works without it.
+The third-party Hallmark design skill is vendored in `.agents/skills/hallmark` because it can help teams later improve landing-page design. It is optional and MIT licensed. The harness workflow comes first.

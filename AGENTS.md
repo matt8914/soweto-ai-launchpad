@@ -1,55 +1,40 @@
 # AGENTS.md
 
-This repo is a one-day starter kit for the Boundless Soweto AI App Development Challenge 2026.
+This repository is a Codex and harness engineering launch kit. It is not a product scaffold.
 
-## Mission
+## Purpose
 
-Help a team build a working prototype, marketing page, pitch page, business case and impact pathway by 15:40.
+Help participants understand and copy a practical harness into whatever project they decide to build during the Boundless Soweto AI App Development Challenge 2026.
 
-Humans steer. Codex executes. Keep the repo legible, testable and demo-ready.
+## Required Behavior
+
+- Teach before building.
+- Explain harness engineering in plain language.
+- Keep teams focused on one user, one problem and one demo flow.
+- Use Plan mode before implementation work.
+- Use Goal mode when the team has a clear day outcome.
+- Use side chat for status, explanation and course correction.
+- Always use red/green work: define a check, see it fail or mark it incomplete, then make the smallest change to turn it green.
+
+## Do Not
+
+- Do not invent a product for the team.
+- Do not add a default product, homepage, demo route or fake business.
+- Do not require Supabase, Docker, OAuth, cloud setup or paid services.
+- Do not use real participant personal data.
+- Do not skip acceptance criteria.
 
 ## Commands
 
-- Install: `npm install`
-- Reset local SQLite seed: `npm run db:reset`
-- Start app: `npm run dev`
-- Test: `npm test`
-- Full check: `npm run check`
-- Build: `npm run build`
-- Smoke check: `npm run smoke`
-- Setup help: `npm run doctor`
+- Validate the launch kit: `npm test`
+- Check setup: `npm run doctor`
+- Full repo check: `npm run check`
+- Copy harness files into a team project: `npm run copy:harness -- /path/to/project`
 
-## Red/Green TDD Rule
+## What Done Means
 
-Always use red/green test-driven development:
-
-1. State the user story.
-2. Add or update one failing test or checklist item.
-3. Run the smallest relevant check and confirm it is red.
-4. Implement the smallest useful change.
-5. Run `npm run check` or the narrowest relevant check until green.
-
-## Scope
-
-- Use Next.js, TypeScript, Tailwind and local SQLite.
-- Do not require Docker, Supabase, OAuth, payments or external API keys.
-- Use the role switcher for demos instead of real auth.
-- Use only fictional demo data. Do not add real participant personal information.
-- Keep app flows simple enough to explain in a five-minute pitch.
-
-## Where To Look
-
-- `README.md` for participant setup.
-- `docs/HARNESS_ENGINEERING.md` for the workshop mindset.
-- `docs/PROMPT_LIBRARY.md` for copy-paste Codex prompts.
-- `docs/JUDGING_RUBRIC.md` for what judges need to see.
-- `docs/PROJECT_BRIEF.md` for how to choose the team idea.
-- `.agents/skills/challenge-coach/SKILL.md` for the repo-specific coaching skill.
-
-## Done Means
-
-- Homepage explains the product and target user.
-- `/demo` shows 2-3 roles and one working journey.
-- `/pitch` has problem, target user, solution, business model and impact pathway.
-- `/checklist` is complete.
-- `npm run check`, `npm run build` and `npm run smoke` pass.
+- The repo teaches harness engineering.
+- The repo explains Plan mode, Goal mode and side chat.
+- The repo contains copyable harness templates.
+- The repo validates that it is not a product scaffold.
+- `npm run check` passes.

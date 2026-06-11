@@ -17,10 +17,10 @@ Venue: Boundless Soweto Campus, Diepkloof Zone 3, Soweto
 
 ## Team Milestones
 
-- 10:40 - Repo running locally
+- 10:40 - Harness copied into the team project
 - 11:15 - Problem, user and core flow chosen
-- 12:00 - Homepage customized
-- 13:45 - Demo role flow working
-- 14:45 - Pitch page complete
-- 15:20 - Checks green and demo rehearsed
+- 12:00 - Project brief and acceptance criteria written
+- 13:45 - First core demo flow working or honestly marked as mocked
+- 14:45 - Demo script and business case ready
+- 15:20 - Red/green checks reviewed and demo rehearsed
 - 15:40 - Ready to pitch

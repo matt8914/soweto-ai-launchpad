@@ -10,10 +10,10 @@ Use this to prepare the final demo.
 
 ## 2. Prototype
 
-- The app runs locally.
+- The prototype runs locally or the clickable flow is easy to inspect.
 - The main flow works.
-- The role switcher shows 2-3 perspectives.
-- Judges can understand the demo without logging in.
+- The team can show the relevant user perspectives.
+- Judges can understand the demo without complex setup.
 
 ## 3. Business Case
 
@@ -29,5 +29,5 @@ Use this to prepare the final demo.
 ## 5. Build Discipline
 
 - The team used Codex with clear prompts.
-- The harness is visible: seed data, tests, scripts and checklist.
-- `npm run check` passes or the team can clearly explain the remaining failure.
+- The harness is visible: `AGENTS.md`, project brief, acceptance criteria, checks and demo script.
+- The team can show what is green and explain any remaining red item.

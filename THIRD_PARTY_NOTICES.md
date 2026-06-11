@@ -9,7 +9,7 @@ This repo vendors the Hallmark design skill from:
 - Local path: `.agents/skills/hallmark`
 - License: MIT, preserved at `.agents/skills/hallmark/LICENSE`
 
-Hallmark is a third-party project. This starter repo does not claim authorship of Hallmark.
+Hallmark is a third-party project. This launch kit does not claim authorship of Hallmark.
 
 ## Design Use Boundary
 

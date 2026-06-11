@@ -1,45 +1,52 @@
-# Codex Prompt Library
+# Prompt Library
 
-Use short prompts. Keep the task and definition of done clear.
+These prompts are designed for teams building their own app, not this repo.
 
-## Start In Plan Mode
+## Explain The Harness
 
 ```text
-Read the repo and use Plan mode. Do not edit files yet. We are building for the [track] track. Help us choose one specific user, one painful problem, and one demo flow we can finish today.
+Read this repo and explain harness engineering in plain language for a team of first-time Codex users. Then show us what to copy into our own project.
 ```
 
-## Set The Goal
+## Start With Plan Mode
 
 ```text
-By 15:40, help us ship a working local prototype, marketing homepage, pitch page, business case and green checks. Use local SQLite, no real auth and no external services.
+Use Plan mode. Do not edit yet.
+
+We are building for the [challenge track] track.
+Our target user is [specific user].
+The problem is [specific problem].
+The demo must be ready by 15:40.
+
+Turn this into one narrow build plan, one demo flow, and one first red/green check.
 ```
 
-## Red Test
+## Create The Goal
 
 ```text
-Write one failing test for this user story: [story]. Do not implement the feature yet. Run the test and show me the red result.
+Draft a Goal mode objective for this project. It must include the final demo outcome, acceptance criteria, and commands/checks that prove the work is green.
 ```
 
-## Green Fix
+## Red First
 
 ```text
-Implement only enough to make the failing test pass. Keep the flow simple and judge-friendly. Then run the narrow test and npm run check.
+Before implementing, add or define one failing check for this user story. Show why it is currently red. Do not build extra features.
 ```
 
-## Design Polish
+## Green Next
 
 ```text
-Improve the homepage so it feels like a real launch page for [target user]. Keep the content specific, avoid generic AI gradients, and do not change the app flow.
+Make the smallest change that turns the red check green. Keep the implementation simple enough to explain during judging.
 ```
 
-## Pitch Review
+## Side Chat Status
 
 ```text
-Review /pitch for a five-minute judging pitch. Make the problem, target user, demo flow, business model and impact pathway sharper. Keep it truthful to what we built.
+Side chat: summarize what is done, what is still red, what is risky, and what we should cut if time is short.
 ```
 
-## Side Chat
+## Prepare The Pitch
 
 ```text
-Give me a status recap. What is done, what is risky, and what is the fastest path to a demo by 15:40?
+Use the demo script and acceptance criteria to prepare a five-minute pitch. Keep it honest: say what works, what is mocked, and what the next pilot step would be.
 ```
