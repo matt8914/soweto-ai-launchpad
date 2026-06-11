@@ -1,9 +1,13 @@
 import js from "@eslint/js";
-import nextPlugin from "@next/eslint-plugin-next";
+import { FlatCompat } from "@eslint/eslintrc";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 
-export default [
+const compat = new FlatCompat({
+  baseDirectory: import.meta.dirname
+});
+
+const config = [
   {
     ignores: [
       ".next/**",
@@ -14,6 +18,7 @@ export default [
       ".agents/skills/hallmark/**"
     ]
   },
+  ...compat.extends("next/core-web-vitals"),
   js.configs.recommended,
   ...tseslint.configs.recommended,
   {
@@ -29,13 +34,8 @@ export default [
       }
     },
     rules: {
-      ...nextPlugin.configs.recommended.rules,
-      ...nextPlugin.configs["core-web-vitals"].rules,
       "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
       "no-undef": "off"
-    },
-    plugins: {
-      "@next/next": nextPlugin
     }
   },
   {
@@ -45,3 +45,5 @@ export default [
     }
   }
 ];
+
+export default config;
