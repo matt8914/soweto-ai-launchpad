@@ -54,6 +54,7 @@ Read AGENTS.md and the docs in this repo. Propose the smallest harness and first
 ## Repo Map
 
 - `docs/HARNESS_ENGINEERING.md` - the main explanation.
+- `docs/OPENAI_HARNESS_ENGINEERING_ARTICLE.md` - markdown companion to Ryan Lopopolo's OpenAI article.
 - `docs/CODEX_MODES.md` - Plan mode, Goal mode and side chat.
 - `docs/PROMPT_LIBRARY.md` - copy-paste prompts for the challenge.
 - `docs/COPY_THIS_HARNESS.md` - what to copy into a team project.

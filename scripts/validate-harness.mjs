@@ -5,6 +5,7 @@ const requiredFiles = [
   "README.md",
   "AGENTS.md",
   "docs/HARNESS_ENGINEERING.md",
+  "docs/OPENAI_HARNESS_ENGINEERING_ARTICLE.md",
   "docs/CODEX_MODES.md",
   "docs/PROMPT_LIBRARY.md",
   "docs/COPY_THIS_HARNESS.md",
@@ -39,6 +40,8 @@ const forbiddenTerms = [
 
 const requiredTerms = [
   "harness engineering",
+  "Ryan Lopopolo",
+  "https://openai.com/index/harness-engineering/",
   "Plan mode",
   "Goal mode",
   "side chat",
