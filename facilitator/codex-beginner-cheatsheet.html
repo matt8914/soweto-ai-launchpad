@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Codex Beginner Cheat Sheet</title>
+    <style>
+      :root {
+        --ink: #111827;
+        --muted: #4b5563;
+        --line: #d1d5db;
+        --paper: #ffffff;
+        --soft: #f3f4f6;
+        --accent: #0f766e;
+        --warn: #9a3412;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: #e5e7eb;
+        color: var(--ink);
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.35;
+      }
+
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 16px auto;
+        padding: 16mm;
+        background: var(--paper);
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      header {
+        border-bottom: 3px solid var(--accent);
+        padding-bottom: 10px;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      h1 {
+        font-size: 30px;
+        letter-spacing: 0;
+      }
+
+      h2 {
+        font-size: 18px;
+        margin-bottom: 6px;
+      }
+
+      h3 {
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+
+      p,
+      li {
+        font-size: 12.5px;
+      }
+
+      .subtitle {
+        color: var(--muted);
+        font-size: 14px;
+        margin-top: 4px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .box {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 10px;
+        background: #fff;
+      }
+
+      .box.soft {
+        background: var(--soft);
+      }
+
+      .box.accent {
+        border-color: var(--accent);
+      }
+
+      .box.warn {
+        border-color: #fed7aa;
+        background: #fff7ed;
+      }
+
+      ul,
+      ol {
+        margin: 0;
+        padding-left: 18px;
+      }
+
+      code,
+      pre {
+        font-family: "SFMono-Regular", Consolas, monospace;
+      }
+
+      pre {
+        white-space: pre-wrap;
+        margin: 6px 0 0;
+        padding: 9px;
+        border-radius: 6px;
+        background: #111827;
+        color: #f9fafb;
+        font-size: 11px;
+        line-height: 1.35;
+      }
+
+      .pill-row {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+        margin-top: 6px;
+      }
+
+      .pill {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 4px 8px;
+        font-size: 11px;
+        background: #fff;
+      }
+
+      .footer {
+        margin-top: auto;
+        padding-top: 8px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 11px;
+      }
+
+      strong {
+        color: var(--ink);
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        .page {
+          margin: 0;
+          box-shadow: none;
+          page-break-after: always;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="page">
+      <header>
+        <h1>First Time Using Codex</h1>
+        <p class="subtitle">A simple cheat sheet for 35 students in 5 groups of 7.</p>
+      </header>
+
+      <div class="grid">
+        <div class="box accent">
+          <h2>What is Codex?</h2>
+          <p>Codex is an AI build partner. It can help write code, fix errors, run checks, explain files, improve design and prepare a demo.</p>
+          <p style="margin-top: 6px;"><strong>Your job:</strong> choose the problem, steer the work, check the result.</p>
+        </div>
+
+        <div class="box soft">
+          <h2>Today's mission</h2>
+          <p>Build one small demo. Not a perfect app.</p>
+          <ul>
+            <li>One real problem</li>
+            <li>One clear user</li>
+            <li>One useful action</li>
+            <li>Fake data only</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="box">
+        <h2>Give every person a role</h2>
+        <div class="pill-row">
+          <span class="pill">Driver: types into Codex</span>
+          <span class="pill">Problem owner</span>
+          <span class="pill">User owner</span>
+          <span class="pill">Tester</span>
+          <span class="pill">Designer</span>
+          <span class="pill">Pitch lead</span>
+          <span class="pill">Timekeeper</span>
+        </div>
+      </div>
+
+      <div class="box">
+        <h2>Start with one sentence</h2>
+        <pre>A [specific person] in Soweto struggles with [specific problem], so our app helps them [specific result].</pre>
+      </div>
+
+      <div class="box">
+        <h2>First prompt to paste into Codex</h2>
+        <pre>We are using Codex for the first time.
+
+We are a team of 7 students in the Boundless Soweto AI App Development Challenge.
+
+Our problem is: [write the problem]
+Our user is: [write the person]
+Our app should help them: [write the result]
+
+Please explain the plan in simple language. Then help us build the smallest demo version of this app. Teach us what you are doing as you go. Use fake data only. Do not use real personal data.</pre>
+      </div>
+
+      <div class="grid">
+        <div class="box">
+          <h2>Three Codex moves</h2>
+          <p><strong>Plan mode:</strong> use when confused. Ask Codex to think before editing.</p>
+          <p><strong>Goal mode:</strong> use when you know the outcome and need Codex to keep working.</p>
+          <p><strong>Side chat:</strong> ask for status or explanation without stopping the build.</p>
+        </div>
+
+        <div class="box">
+          <h2>What is a harness?</h2>
+          <p>A harness is a short note that tells Codex what you are building and how to check it.</p>
+          <pre>User:
+Problem:
+Main action:
+Fake data:
+Demo must show:
+How we check it works:</pre>
+        </div>
+      </div>
+
+      <p class="footer">Page 1 of 2 - Keep it simple: problem, user, one action, fake data, working demo.</p>
+    </section>
+
+    <section class="page">
+      <header>
+        <h1>Build One Useful Demo</h1>
+        <p class="subtitle">Pick one problem. Build one flow. Explain it clearly.</p>
+      </header>
+
+      <div class="grid">
+        <div class="box">
+          <h2>Possible demo ideas</h2>
+          <ul>
+            <li><strong>Safety:</strong> fictional safety report plus useful contacts.</li>
+            <li><strong>Healthcare:</strong> affordable care finder with fake data.</li>
+            <li><strong>Missing people:</strong> fictional case tracker and reporting steps.</li>
+            <li><strong>Traffic:</strong> delay report board or route status page.</li>
+          </ul>
+        </div>
+
+        <div class="box warn">
+          <h2>Important safety rule</h2>
+          <p>For safety, healthcare and missing people, this is a prototype. Do not promise emergency response.</p>
+          <p style="margin-top: 6px;">Use no real names, photos, ID numbers, phone numbers, addresses or medical details.</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <h2>Ask Codex for the next step</h2>
+        <div class="grid">
+          <pre>Build the first screen for this demo.</pre>
+          <pre>Run the app locally and tell us the link to open.</pre>
+          <pre>The app has an error. Read the error and fix it step by step.</pre>
+          <pre>Make the screen easier for judges to understand in 30 seconds.</pre>
+          <pre>Create a 5-minute pitch based only on what our demo actually does.</pre>
+          <pre>We have little time. What is the fastest fix so the demo still makes sense?</pre>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="box">
+          <h2>Green means ready enough</h2>
+          <ul>
+            <li>The app opens.</li>
+            <li>The main screen is clear.</li>
+            <li>One user can complete one action.</li>
+            <li>All data is fake.</li>
+            <li>The team can explain the problem.</li>
+            <li>The team can say what they would build next.</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h2>If stuck, paste this</h2>
+          <pre>We are stuck and we are beginners. Explain the problem simply. Then choose the fastest next step and do it. We need a demo more than we need a perfect app.</pre>
+        </div>
+      </div>
+
+      <div class="box accent">
+        <h2>Remember</h2>
+        <p>You do not need to know everything. Start with the problem. Tell Codex what you want. Let Codex help you build one useful thing.</p>
+      </div>
+
+      <p class="footer">Page 2 of 2 - Judges should see one clear problem, one clear user and one action that works.</p>
+    </section>
+  </body>
+</html>

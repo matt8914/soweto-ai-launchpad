@@ -57,6 +57,8 @@ Use Plan mode if the path is fuzzy. Then help us build. Teach us what you are do
 ## Repo Map
 
 - `AGENTS.md` - durable instructions telling Codex to help teams build and teach while building.
+- `docs/CODEX_BEGINNER_CHEATSHEET.md` - very simple first-time Codex guide for the students.
+- `docs/HERMES_CONTEXT.md` - rich context prompt for handing the event support to a Hermes agent.
 - `docs/BUILD_WITH_CODEX.md` - practical guide for using Codex during the challenge.
 - `docs/HARNESS_ENGINEERING.md` - the main harness engineering explanation.
 - `docs/OPENAI_HARNESS_ENGINEERING_ARTICLE.md` - markdown companion to Ryan Lopopolo's OpenAI article.
@@ -65,6 +67,8 @@ Use Plan mode if the path is fuzzy. Then help us build. Teach us what you are do
 - `docs/COPY_THIS_HARNESS.md` - optional files teams can copy into their app.
 - `templates/project-harness/` - optional starter harness files.
 - `.agents/skills/harness-coach/` - repo skill for Codex to teach and apply the harness.
+- `facilitator/codex-beginner-cheatsheet.html` - printable two-page beginner handout.
+- `facilitator/group-run-plan.md` - simple facilitator plan for 5 groups of 7.
 - `facilitator/masterclass-guide.md` - 35-minute Luma masterclass script.
 
 ## Commands

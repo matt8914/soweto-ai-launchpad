@@ -1,8 +1,8 @@
 {
   "name": "soweto-ai-launchpad",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": false,
-  "description": "A permissive Codex build companion for the Boundless Soweto AI App Development Challenge 2026.",
+  "description": "A beginner-friendly Codex build companion for the Boundless Soweto AI App Development Challenge 2026.",
   "type": "module",
   "scripts": {
     "test": "node scripts/validate-harness.mjs",
