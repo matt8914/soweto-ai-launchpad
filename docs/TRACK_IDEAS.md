@@ -1,6 +1,6 @@
 # Challenge Track Ideas
 
-Choose one track and one narrow problem.
+Choose a track, then start with one clear user problem. You can expand once the first demo works.
 
 ## Youth Employment and Skills Access
 

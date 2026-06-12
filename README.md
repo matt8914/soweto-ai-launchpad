@@ -1,70 +1,77 @@
-# Soweto AI Harness Launch Kit
+# Soweto AI Codex Build Companion
 
-This is not an application scaffold.
+This repo helps teams at the Boundless Soweto AI App Development Challenge understand Codex, harness engineering and agent-assisted building.
 
-This repo is a Codex and harness engineering launch kit for the Boundless Soweto AI App Development Challenge 2026. Teams should clone it, let Codex read it, learn the workflow, then copy the harness templates into the project they decide to build.
+It is not meant to restrict what graduates can build. It is meant to give Codex enough context to help them build whatever app they choose, while teaching them along the way.
 
 The core idea:
 
 ```text
-Humans steer. Agents execute. The harness makes the work visible, testable and reviewable.
+Humans steer. Agents execute. The harness keeps the work clear, testable and teachable.
 ```
 
 ## What This Repo Teaches
 
 - What harness engineering is.
-- How to use Codex as a build partner instead of an autocomplete tool.
-- How to use Plan mode before coding.
-- How to use Goal mode to hold the day’s outcome steady.
-- How to use side chat for status, explanations and course correction.
-- How to use red/green checks so teams know whether the prototype still works.
-- How to give Codex enough repo context through `AGENTS.md`, docs, prompts, acceptance criteria and tests.
+- How Codex works as a build partner.
+- How to use Plan mode for fuzzy decisions.
+- How to use Goal mode once the outcome is clear.
+- How to use side chat for explanations and status.
+- How to use skills and subagents when they help.
+- How to keep red/green feedback loops lightweight and enabling.
+- How to make a project understandable to Codex through `AGENTS.md`, short docs, acceptance criteria and checks.
 
-## How Participants Should Use It
+## How Participants Can Use It
 
-1. Clone this repo.
-2. Open it with Codex.
-3. Ask Codex to explain the harness in plain language.
-4. Choose the project your team wants to build.
-5. Copy `templates/project-harness/` into your new project folder.
-6. Customize the copied files for your idea.
-7. Start building with Plan mode, Goal mode and red/green checks.
+There are two good paths:
+
+1. Use this repo as a reference while building a new app somewhere else.
+2. Fork or clone this repo and ask Codex to turn it into the app your team chooses.
+
+Both are fine. The point is not to protect this repo from app code. The point is to help the team learn how to steer Codex.
 
 ## First Prompt
 
 ```text
-Read this repo and explain harness engineering to our team in plain language. Then show us exactly which files from templates/project-harness we should copy into the project we are about to build. Do not write product code yet.
+Read this repo first. Understand the challenge, harness engineering, and how you should teach us while building.
+
+Then help us choose or sharpen one app idea, create the smallest useful harness, and start building the first demoable version.
 ```
 
-## The Prompt To Start A New Project
+## Build Prompt
 
-Use this after your team has chosen a problem:
+Use this when your team has an idea:
 
 ```text
-We are building for the Boundless Soweto AI App Development Challenge. Use Plan mode. Do not edit yet.
+We are building for the Boundless Soweto AI App Development Challenge.
 
-Our user is: [specific user]
-Their problem is: [specific problem]
+Our idea is: [describe the app]
+Our target user is: [specific user]
+The problem is: [specific problem]
 The result we want is: [specific result]
-Our demo must be ready by 15:40.
+Our demo must be ready by: [time]
 
-Read AGENTS.md and the docs in this repo. Propose the smallest harness and first red/green milestone for our project.
+Use Plan mode if the path is fuzzy. Then help us build. Teach us what you are doing as you go, suggest Codex features when useful, and keep the harness lightweight and enabling.
 ```
 
 ## Repo Map
 
-- `docs/HARNESS_ENGINEERING.md` - the main explanation.
+- `AGENTS.md` - durable instructions telling Codex to help teams build and teach while building.
+- `docs/BUILD_WITH_CODEX.md` - practical guide for using Codex during the challenge.
+- `docs/HARNESS_ENGINEERING.md` - the main harness engineering explanation.
 - `docs/OPENAI_HARNESS_ENGINEERING_ARTICLE.md` - markdown companion to Ryan Lopopolo's OpenAI article.
-- `docs/CODEX_MODES.md` - Plan mode, Goal mode and side chat.
+- `docs/CODEX_MODES.md` - Plan mode, Goal mode, side chat and subagents.
 - `docs/PROMPT_LIBRARY.md` - copy-paste prompts for the challenge.
-- `docs/COPY_THIS_HARNESS.md` - what to copy into a team project.
-- `templates/project-harness/` - the actual copyable harness.
+- `docs/COPY_THIS_HARNESS.md` - optional files teams can copy into their app.
+- `templates/project-harness/` - optional starter harness files.
 - `.agents/skills/harness-coach/` - repo skill for Codex to teach and apply the harness.
 - `facilitator/masterclass-guide.md` - 35-minute Luma masterclass script.
 
 ## Commands
 
-There is no product runtime in this repo.
+This companion repo has no required app runtime. If your team scaffolds an app here, add the app's normal commands as you go.
+
+For the companion repo itself:
 
 ```bash
 npm test
@@ -72,9 +79,7 @@ npm run doctor
 npm run check
 ```
 
-These commands validate that the launch kit still contains the right harness material and has not drifted back into a product scaffold.
-
-To copy the harness into another project:
+To copy optional harness files into another project:
 
 ```bash
 npm run copy:harness -- /path/to/your-project
@@ -82,4 +87,4 @@ npm run copy:harness -- /path/to/your-project
 
 ## Optional Hallmark Design Skill
 
-The third-party Hallmark design skill is vendored in `.agents/skills/hallmark` because it can help teams later improve landing-page design. It is optional and MIT licensed. The harness workflow comes first.
+The third-party Hallmark design skill is vendored in `.agents/skills/hallmark` because it can help teams improve landing-page design. It is optional and MIT licensed. Use it for design direction, not for copying protected designs, logos, paid templates or exact trade dress.

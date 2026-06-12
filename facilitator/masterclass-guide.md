@@ -57,6 +57,7 @@ Teach four moves:
 - Plan mode: think before edits.
 - Goal mode: hold the outcome steady.
 - Side chat: ask for status or explanation without derailing the main task.
+- Subagents: ask Codex to split independent review or exploration work when useful.
 - Red/green: define a check, see red, make the smallest change, get green.
 
 ## 10:34-10:40 - First Team Action
@@ -64,7 +65,7 @@ Teach four moves:
 Every team opens this repo in Codex and pastes:
 
 ```text
-Read this repo and explain harness engineering to our team in plain language. Then show us exactly which files from templates/project-harness we should copy into the app we are about to build. Do not write app code yet.
+Read this repo and explain harness engineering to our team in plain language. Then help us choose or sharpen one app idea, create the smallest useful harness, and start building the first demoable version. Teach us what you are doing as you go.
 ```
 
 Close with:

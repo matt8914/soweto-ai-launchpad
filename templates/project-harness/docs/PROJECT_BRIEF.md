@@ -38,8 +38,8 @@ A [specific user] in Soweto struggles to [specific job], so our project helps th
 [Optional role 3]
 ```
 
-## What We Will Not Build Today
+## What We Might Defer
 
 ```text
-[List anything out of scope so Codex does not broaden the project.]
+[List ideas that are useful but can wait until the first demo works.]
 ```

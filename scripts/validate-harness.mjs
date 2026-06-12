@@ -7,6 +7,7 @@ const requiredFiles = [
   "docs/HARNESS_ENGINEERING.md",
   "docs/OPENAI_HARNESS_ENGINEERING_ARTICLE.md",
   "docs/CODEX_MODES.md",
+  "docs/BUILD_WITH_CODEX.md",
   "docs/PROMPT_LIBRARY.md",
   "docs/COPY_THIS_HARNESS.md",
   "docs/DAY_PLAN.md",
@@ -19,32 +20,24 @@ const requiredFiles = [
   ".agents/skills/harness-coach/SKILL.md"
 ];
 
-const forbiddenPaths = [
-  "src",
-  "public",
-  "next.config.ts",
-  "next-env.d.ts",
-  "tailwind.config.ts",
-  "postcss.config.mjs",
-  "vitest.config.ts"
-];
-
 const forbiddenTerms = [
   "KasiCareer",
   "Kasi Career",
   "Cassie Career",
-  "RoleSwitcher",
-  "starter app",
-  "sample product"
+  "RoleSwitcher"
 ];
 
 const requiredTerms = [
   "harness engineering",
   "Ryan Lopopolo",
   "https://openai.com/index/harness-engineering/",
+  "build whatever app",
+  "teach while building",
+  "lightweight and enabling",
   "Plan mode",
   "Goal mode",
   "side chat",
+  "subagents",
   "red/green",
   "AGENTS.md",
   "acceptance criteria"
@@ -55,12 +48,6 @@ const failures = [];
 for (const file of requiredFiles) {
   if (!existsSync(join(process.cwd(), file))) {
     failures.push(`Missing required harness file: ${file}`);
-  }
-}
-
-for (const filePath of forbiddenPaths) {
-  if (existsSync(join(process.cwd(), filePath))) {
-    failures.push(`App scaffold should not exist in this harness repo: ${filePath}`);
   }
 }
 
@@ -92,4 +79,4 @@ if (failures.length > 0) {
   process.exit(1);
 }
 
-console.log("Harness validation passed. This repo is a Codex/harness launch kit, not a product scaffold.");
+console.log("Harness validation passed. This repo is a permissive Codex build companion.");

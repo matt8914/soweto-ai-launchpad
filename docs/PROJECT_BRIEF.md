@@ -24,10 +24,10 @@ An unemployed graduate in Diepkloof struggles to show proof of readiness, so our
 - What judges should see in five minutes
 - What happens after the event
 
-## Avoid
+## Watchouts
 
-- Building for everyone
+- Starting so broad that Codex cannot find the first demo journey
 - Real payments
 - Real personal data
 - Complex authentication
-- More than one core workflow
+- Too many workflows before the first one works

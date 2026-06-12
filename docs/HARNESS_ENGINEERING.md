@@ -11,7 +11,7 @@ The harness is how the team and Codex know whether the app is working.
 
 ## Plain-English Version
 
-A harness is the safety rail, dashboard and test track around the thing you are building.
+A harness is the workbench, dashboard and test track around the thing you are building.
 
 It helps Codex answer:
 
@@ -38,7 +38,7 @@ The real win is steering:
 
 Without a harness, Codex guesses. With a harness, Codex can work inside a system.
 
-## What A Small Harness Contains
+## What A Small Harness Can Contain
 
 - `AGENTS.md` - durable instructions for Codex.
 - `docs/PROJECT_BRIEF.md` - the user, problem, result and demo scope.
@@ -60,6 +60,6 @@ This is red/green test-driven development for a one-day prototype.
 
 ## The Mindset
 
-Good teams do not ask AI to build everything.
+Good teams can ask AI to build ambitious things.
 
-Good teams build a harness that lets AI build the next small thing with confidence.
+The difference is that they give Codex context, feedback and a direction of travel, then keep expanding from the first working version.
